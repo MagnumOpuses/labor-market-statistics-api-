@@ -17,6 +17,7 @@ module.exports.setup =  (app) =>{
      *         in: formData
      *         required: true
      *         type: string
+     * 
      */
     app.get('/statistics/arbetsmarknadsdata', stats.arbetsmarknadsData);
     /**
