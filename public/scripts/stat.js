@@ -17,7 +17,6 @@
     }
 
     function addAnchorList(jsonList, elementId) {
-        console.log("Is herer!!!");
         jsonList.forEach((data, index) => {
             if (data.Code.length === 2) {
                 elementId.insertAdjacentHTML('beforeend', '<hr />');
@@ -37,7 +36,6 @@
     const createLinkList = () =>{
         var select = document.getElementById('selectMonth');
         currentIndex = select.selectedIndex;
-        console.log("Månad: "+options[currentIndex]);
         let listId = document.querySelector('#linklist');
         document.getElementsByClassName('listHead')[0].textContent =`Statistik länkar för År-Månad ${options[currentIndex]}` ;
         addAnchorList( tempList, listId);
@@ -52,18 +50,13 @@
     };
     
     function init(){
-        console.log("Is herer!!!!");
         var select = document.getElementById('selectMonth');
         var xHttp = new XMLHttpRequest();
-        xHttp.open("GET", "http://localhost:3000/statistics/months");
+        xHttp.open("GET", "/statistics/months");
         xHttp.send();
-        console.log(xHttp.status);
         xHttp.onload = async () =>{
-            console.log(xHttp.status);
-            console.log(xHttp.responseText);
             options = JSON.parse(xHttp.responseText);
             init.manad=options[0];
-            console.log("Options: " + options[currentIndex]);
             for(var i = 0; i < options.length; i++) {
                 var opt = options[i];
                 var el = document.createElement("option");
