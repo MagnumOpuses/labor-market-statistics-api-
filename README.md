@@ -26,9 +26,7 @@ Configuration in local .env-file
 [2] http://qvext.arbetsformedlingen.se/QvAJAXZfc/opendoc.htm?document=extern%5Cmstatplus_extern.qvw&host=QVS%40CLUSTEREXT&anonymous=true%20&select=StartTrigger,1
 
 ## Todo
-- Add GraphQL endpoints,   
-  https://docs.mongodb.com/realm/graphql  
-  https://medium.com/the-ideal-system/graphql-and-mongodb-a-quick-example-34643e637e49
+- Restrict access to the API
 - Fix CORS
 - All errors should be handled and relevant info to the users.
 - Only read on MongoDb user
